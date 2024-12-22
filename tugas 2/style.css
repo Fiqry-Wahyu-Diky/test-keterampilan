@@ -23,7 +23,7 @@ body {
 
 h1 {
   text-align: center;
-  color: #ff7043; /* Oranye cerah untuk judul */
+  color: #ffa538; /* Oranye cerah untuk judul */
   font-size: 2.5em;
   margin-bottom: 2rem;
 }
@@ -47,7 +47,7 @@ input {
 
 button {
   padding: 0.8rem 1.5rem;
-  background-color: #ff7043; /* Oranye cerah untuk tombol */
+  background-color: #ED9431; /* Oranye cerah untuk tombol */
   color: white;
   border: none;
   border-radius: 8px;
@@ -92,13 +92,13 @@ button:hover {
 
 .recipe-info h3 {
   margin: 0 0 1rem 0;
-  color: #ff7043; /* Oranye cerah untuk judul resep */
+  color: #ED9431; /* Oranye cerah untuk judul resep */
   font-size: 1.2rem;
 }
 
 .recipe-info p {
   margin: 0.5rem 0;
-  color: #f9a825; /* Oranye muda untuk deskripsi */
+  color: white; /* Oranye muda untuk deskripsi */
 }
 
 .view-recipe,
@@ -118,7 +118,7 @@ button:hover {
 }
 
 .view-recipe {
-  background-color: #ff7043; /* Oranye cerah untuk tombol resep */
+  background-color: #ED9431; /* Oranye cerah untuk tombol resep */
   color: white;
 }
 
@@ -261,7 +261,7 @@ button:hover {
   left: 0;
   width: 100%;
   background-color: #222222; /* Warna gelap untuk footer */
-  color: #f9a825; /* Warna teks oranye */
+  color: white; /* Warna teks oranye */
   text-align: center;
   padding: 2;
   font-size: 1rem;
@@ -269,7 +269,7 @@ button:hover {
 }
 
 .footer a {
-  color: #ff7043; /* Warna oranye untuk tautan */
+  color: #ED9431; /* Warna oranye untuk tautan */
   text-decoration: none;
   font-weight: bold;
 }
