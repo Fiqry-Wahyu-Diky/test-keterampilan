@@ -41,6 +41,9 @@ function displayRecipes(recipes) {
       icon: 'info',
       title: 'No recipes found',
       text: 'Please try another search term.',
+    }).then(() => {
+      // Setelah OK di klik, tampilkan semua resep
+      searchRecipes(); // Menampilkan semua resep ketika tidak ada hasil pencarian
     });
     recipesContainer.innerHTML = ''; // Kosongkan kontainer untuk hasil resep
     return;
