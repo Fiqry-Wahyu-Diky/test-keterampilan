@@ -1,0 +1,285 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: dark;
+  background-color: #111111; /* Background gelap */
+  color: #f9a825; /* Warna teks oranye */
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: #111111; /* Background gelap */
+  color: #f9a825; /* Warna teks oranye */
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+h1 {
+  text-align: center;
+  color: #ff7043; /* Oranye cerah untuk judul */
+  font-size: 2.5em;
+  margin-bottom: 2rem;
+}
+
+.search-container {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+input {
+  padding: 0.8rem 1rem;
+  border: 2px solid #444444; /* Border lebih gelap */
+  border-radius: 8px;
+  width: 300px;
+  font-size: 1rem;
+  background-color: #222222; /* Background input lebih gelap */
+  color: #f9a825; /* Teks input oranye */
+}
+
+button {
+  padding: 0.8rem 1.5rem;
+  background-color: #ff7043; /* Oranye cerah untuk tombol */
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #ff5722; /* Warna lebih gelap saat hover */
+}
+
+/* Recipe Grid Styles */
+.recipes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2rem;
+  padding: 1rem;
+}
+
+.recipe-card {
+  background: #222222; /* Background kartu lebih gelap */
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s;
+}
+
+.recipe-card:hover {
+  transform: translateY(-5px);
+}
+
+.recipe-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.recipe-info {
+  padding: 1.5rem;
+}
+
+.recipe-info h3 {
+  margin: 0 0 1rem 0;
+  color: #ff7043; /* Oranye cerah untuk judul resep */
+  font-size: 1.2rem;
+}
+
+.recipe-info p {
+  margin: 0.5rem 0;
+  color: #f9a825; /* Oranye muda untuk deskripsi */
+}
+
+.view-recipe,
+.view-details {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background-color 0.3s;
+}
+
+.view-details {
+  background-color: #444444; /* Warna gelap untuk tombol detail */
+  color: white;
+  margin-right: 0.5rem;
+}
+
+.view-recipe {
+  background-color: #ff7043; /* Oranye cerah untuk tombol resep */
+  color: white;
+}
+
+.view-details:hover {
+  background-color: #333333; /* Hover gelap saat tombol detail */
+}
+
+.view-recipe:hover {
+  background-color: #ff5722; /* Hover lebih gelap saat tombol resep */
+}
+
+/* Modal Styles */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8); /* Background modal gelap */
+  z-index: 1000;
+}
+
+.modal-content {
+  position: relative;
+  background-color: #222222; /* Background modal lebih gelap */
+  margin: 5% auto;
+  padding: 2rem;
+  width: 90%;
+  max-width: 800px;
+  max-height: 90vh;
+  overflow-y: auto;
+  border-radius: 12px;
+}
+
+.close {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #f9a825; /* Warna close tombol oranye */
+}
+
+.close:hover {
+  color: #ff5722; /* Hover close tombol lebih gelap */
+}
+
+.modal-body {
+  margin-top: 1rem;
+}
+
+.modal-body h2 {
+  color: #f9a825; /* Teks modal oranye */
+  margin-bottom: 1.5rem;
+}
+
+.modal-body img {
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+}
+
+.recipe-sections {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.ingredients-section,
+.instructions-section {
+  background-color: #333333; /* Background gelap bagian resep */
+  padding: 1.5rem;
+  border-radius: 8px;
+}
+
+.ingredients-section h3,
+.instructions-section h3 {
+  color: #f9a825; /* Teks header oranye */
+  margin-bottom: 1rem;
+}
+
+.ingredients-section ul,
+.instructions-section ol {
+  margin: 0;
+  padding-left: 1.5rem;
+}
+
+.ingredients-section li,
+.instructions-section li {
+  margin-bottom: 0.5rem;
+  line-height: 1.6;
+}
+
+.loading,
+.error,
+.no-results {
+  text-align: center;
+  padding: 2rem;
+  grid-column: 1 / -1;
+  color: #f9a825; /* Warna teks oranye */
+}
+
+.error {
+  color: #ff7043; /* Warna error oranye */
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem;
+  }
+
+  .search-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  input {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .recipe-sections {
+    grid-template-columns: 1fr;
+  }
+
+  .modal-content {
+    margin: 2% auto;
+    padding: 1rem;
+    width: 95%;
+  }
+}
+
+/* Footer Styles */
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #222222; /* Warna gelap untuk footer */
+  color: #f9a825; /* Warna teks oranye */
+  text-align: center;
+  padding: 2;
+  font-size: 1rem;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.5); /* Bayangan agar lebih elegan */
+}
+
+.footer a {
+  color: #ff7043; /* Warna oranye untuk tautan */
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.footer a:hover {
+  color: #ff5722; /* Warna oranye lebih gelap saat hover */
+}
+
+/* To prevent content overlap */
+body {
+  margin: 0;
+  padding-bottom: 4rem; /* Tambahkan padding agar konten tidak tertutup footer */
+}
