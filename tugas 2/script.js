@@ -37,7 +37,12 @@ async function searchRecipes(query = "") {
 
 function displayRecipes(recipes) {
   if (!recipes.length) {
-    recipesContainer.innerHTML = '<div class="no-results">No recipes found</div>';
+    Swal.fire({
+      icon: 'info',
+      title: 'No recipes found',
+      text: 'Please try another search term.',
+    });
+    recipesContainer.innerHTML = ''; // Kosongkan kontainer untuk hasil resep
     return;
   }
 
@@ -57,6 +62,7 @@ function displayRecipes(recipes) {
     )
     .join("");
 }
+
 
 async function fetchRecipeDetails(id) {
   const url = `${apiUrl}/${id}`;

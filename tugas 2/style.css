@@ -188,6 +188,7 @@ button:hover {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 2rem;
+  color: #ED9431;
 }
 
 .ingredients-section,
@@ -199,7 +200,7 @@ button:hover {
 
 .ingredients-section h3,
 .instructions-section h3 {
-  color: #f9a825; /* Teks header oranye */
+  color: #ED9431; /* Teks header oranye */
   margin-bottom: 1rem;
 }
 
@@ -213,6 +214,7 @@ button:hover {
 .instructions-section li {
   margin-bottom: 0.5rem;
   line-height: 1.6;
+  color: white;
 }
 
 .loading,
